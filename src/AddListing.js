@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom/';
 
 const AddListing = () => {
     const [ post_title, set_postTitle] = useState('');
@@ -6,6 +7,7 @@ const AddListing = () => {
     const [ price, set_price] = useState('');
     const [ land_area, set_landArea] = useState('');
     const [ floor_area, set_floorArea] = useState('');
+    const history = useHistory();
 
     const submitListing = (e) => {
         e.preventDefault();
@@ -25,7 +27,9 @@ const AddListing = () => {
 
         fetch('https://houselisting.jhdlcn.com/wp-json/house-listing/add', requestOptions)
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(() => {
+            history.push('/');
+        })
         .catch(error => console.error('Error:', error));
     }
 
