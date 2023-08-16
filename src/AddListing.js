@@ -17,9 +17,10 @@ const AddListing = () => {
         const requestOptions = {
             method: 'POST', 
             headers: {
-                'Authorization': 'Basic ' + base64Credentials
+                'Authorization': 'Basic ' + base64Credentials,
+                'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: JSON.stringify(listing)
+            body: new URLSearchParams(listing),
         };
 
         fetch('https://houselisting.jhdlcn.com/wp-json/house-listing/add', requestOptions)
