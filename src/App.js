@@ -1,3 +1,4 @@
+import AddListing from './AddListing';
 import Home from './Home';
 import Navbar from './Navbar';
 import './index.css';
@@ -12,6 +13,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/add">
+              <AddListing />
             </Route>
           </Switch>
         </div>

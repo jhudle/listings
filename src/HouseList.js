@@ -9,7 +9,11 @@ const HouseList = ({ listing }) => {
                     <div className="listing-info">
                         <h3>{ list.post_title }</h3>
                         <p>
-                            Location: { list.city }, { list.province }
+                            Location: { 
+                                list.city !== null ? 
+                                (list.city !== '' ? list.city + ', ' + list.province : list.province) :
+                                list.province
+                            }
                         </p>
                         <p>
                             Floor Area: { list.floor_area } m<sup>2</sup>
