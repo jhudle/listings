@@ -5,7 +5,7 @@ import HouseList from "./HouseList";
 const Home = () => {
     const [locations, setLocations] = useState(null);
     const [filteredListings, setFilteredListing] = useState(null);
-    const { data: listings, isPending, error } = AllListing('http://houselisting.jhdlcn.com/wp-json/house-listing/all', {
+    const { data: listings, isPending, error } = AllListing('https://houselisting.jhdlcn.com/wp-json/house-listing/all', {
         method: 'GET'
     });
     
@@ -19,7 +19,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        fetch('http://houselisting.jhdlcn.com/wp-json/house-listing/locations', { method: 'GET' })
+        fetch('https://houselisting.jhdlcn.com/wp-json/house-listing/locations', { method: 'GET' })
             .then(res => res.json())
             .then(data => {
                 setLocations(data);
