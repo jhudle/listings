@@ -22,7 +22,12 @@ const Home = () => {
         fetch('https://houselisting.jhdlcn.com/wp-json/house-listing/locations', { method: 'GET' })
             .then(res => res.json())
             .then(data => {
-                setLocations(data);
+                if (typeof data === 'object' && data !== null) {
+                    setLocations(Object.values(data));
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching locations:", error);
             });
     }, []);
 
