@@ -12,13 +12,13 @@ const HouseList = ({ listing }) => {
                             Location: { list.city }, { list.province }
                         </p>
                         <p>
-                            Floor Area: { list.floor_area }m<sup>2</sup>
+                            Floor Area: { list.floor_area } m<sup>2</sup>
                         </p>
                         <p>
-                            Land Size: { list.land_size }m<sup>2</sup>
+                            Land Size: { list.land_size } m<sup>2</sup>
                         </p>
                         <p>
-                            Price: ₱{ Number(list.price).toLocaleString(navigator.language, {
+                            Price: ₱ { Number(list.price).toLocaleString(navigator.language, {
                                 minimumFractionDigits: 2,
                                 maximumFractionDigits: 2
                             }) }
