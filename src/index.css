@@ -1,13 +1,87 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 1023px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #497292;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #497292;
+}
+.content {
+  max-width: 1023px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.home-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter-container {
+  width: 30%;
+}
+
+.listing-container {
+  width: 70%;
+}
+
+.house-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-preview {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  border: 1px solid #497292;
+}
+
+.featured-image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.featured-image {
+  width: 50%;
+}
+
+.listing-info {
+  width: 50%;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.listing-info h3 {
+  color: #497292;
+  margin-bottom: 10px;
+}
+
+.listing-info p {
+  margin-bottom: 10px;
 }
